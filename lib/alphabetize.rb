@@ -1,5 +1,9 @@
 ESPERANTO_ALPHABET = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz"
 
 def alphabetize(arr)
-arr.sort_by(ESPERANTO_ALPHABET)
+ alpha = "abcĉdefgĝhĥijĵklmnoprsŝtuŭvz".chars
+
+  phrases.sort_by do |phrase|
+    phrase.chars.map { |c| alpha.index(c) }
+  end
 end
